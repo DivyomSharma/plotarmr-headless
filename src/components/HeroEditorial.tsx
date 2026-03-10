@@ -34,17 +34,17 @@ export default function HeroEditorial() {
       <div className="relative z-20 flex flex-col items-center text-center px-4 w-full mix-blend-difference text-white">
         <div className="overflow-hidden">
           <h1 className="hero-line text-6xl md:text-8xl lg:text-[10vw] font-primary uppercase tracking-tighter leading-[0.85] mb-6">
-            Welcome To
+            Wear Your
           </h1>
         </div>
         <div className="overflow-hidden">
           <h1 className="hero-line text-6xl md:text-8xl lg:text-[10vw] font-primary uppercase tracking-tighter leading-[0.85]">
-            The Armoury
+            Plot Armour
           </h1>
         </div>
         <div className="overflow-hidden mt-12">
           <p className="hero-line text-sm md:text-base font-secondary max-w-md mx-auto uppercase tracking-[0.2em] font-light">
-            Collection 001 — A study in dark luxury and functional aesthetics.
+            Every arc needs a survivor. Born in New Delhi, India.
           </p>
         </div>
       </div>

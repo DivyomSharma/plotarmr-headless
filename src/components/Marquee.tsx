@@ -20,7 +20,7 @@ export default function Marquee() {
   }, []);
 
   const words = [
-    "PLOT ARMOUR", "STUDIO", "LUXURY", "STREETWEAR", "FW24", "ESSENTIALS"
+    "PLOT ARMOUR", "WEAR YOUR PLOT ARMOUR", "BUILT FOR LEGENDS", "WORN BY SURVIVORS", "NEW DELHI INDIA"
   ];
 
   return (

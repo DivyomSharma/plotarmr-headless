@@ -52,7 +52,36 @@ export default async function ProductPage({ params }: Props) {
 
             <VariantSelector product={product} />
 
-            <div className="pt-12 space-y-6 text-sm text-foreground/60 uppercase tracking-widest border-t border-white/10">
+            <VariantSelector product={product} />
+
+            <div className="pt-8 space-y-8 font-secondary text-sm">
+                <div className="prose prose-invert max-w-none text-foreground/80 leading-relaxed font-light">
+                  <p>
+                    {product.description || "Designed in New Delhi. Crafted for those who survive the plot twists. A staple piece in the Plot Armour collection featuring our signature oversized silhouette and drop-shoulder construction for an effortless streetwear drape."}
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4 text-xs uppercase tracking-widest text-foreground/60 border-y border-white/5 py-6">
+                  <div className="flex flex-col gap-1">
+                    <span className="text-white">Fit</span>
+                    <span>Oversized / Boxy</span>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className="text-white">Fabric</span>
+                    <span>Premium Heavyweight Cotton</span>
+                  </div>
+                  <div className="flex flex-col gap-1 mt-4">
+                    <span className="text-white">Origin</span>
+                    <span>New Delhi, India</span>
+                  </div>
+                  <div className="flex flex-col gap-1 mt-4">
+                    <span className="text-white">Wash Care</span>
+                    <span>Machine wash cold</span>
+                  </div>
+                </div>
+            </div>
+
+            <div className="pt-4 space-y-6 text-sm text-foreground/60 uppercase tracking-widest">
                <div className="flex justify-between border-b border-white/5 pb-4">
                  <span>Shipping</span>
                  <span>Calculated at checkout</span>

@@ -8,26 +8,32 @@ import { TextReveal } from "@/components/animations";
 const collections = [
   {
     id: 1,
-    title: "Heavyweight Tees",
-    slug: "tees",
-    image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1200&auto=format&fit=crop",
+    title: "Bestsellers",
+    slug: "bestsellers",
+    image: "https://images.unsplash.com/photo-1550614000-4b95d4662247?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 2,
-    title: "Outerwear",
-    slug: "outerwear",
-    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=1200&auto=format&fit=crop",
+    title: "New Arrivals",
+    slug: "new-arrivals",
+    image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 3,
-    title: "Bottoms",
-    slug: "bottoms",
-    image: "https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?q=80&w=1200&auto=format&fit=crop",
+    title: "The Spotlight",
+    slug: "the-spotlight",
+    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=1200&auto=format&fit=crop",
   },
   {
     id: 4,
-    title: "Accessories",
-    slug: "accessories",
+    title: "The Monotones",
+    slug: "the-monotones",
+    image: "https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    id: 5,
+    title: "ARMR Collection",
+    slug: "armr-collection",
     image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?q=80&w=1200&auto=format&fit=crop",
   }
 ];

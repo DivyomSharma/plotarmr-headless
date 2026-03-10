@@ -70,12 +70,22 @@ export default function ProductCard({ product, className }: ProductCardProps) {
           />
         )}
 
-        {/* Quick Add Overlay Button */}
+        {/* Quick Add Overlay Button + Brand Metadata */}
+        <div className="absolute top-4 left-4 z-10 flex flex-col gap-2">
+           <span className="bg-white text-black text-[10px] font-bold uppercase tracking-widest px-2 py-1">
+             Oversized Fit
+           </span>
+           {title.toLowerCase().includes("acid") && (
+             <span className="bg-black text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1">
+               Premium Wash
+             </span>
+           )}
+        </div>
         <div className="absolute bottom-4 left-4 right-4 flex items-center justify-center translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out z-10">
           <button
             onClick={handleQuickAdd}
             disabled={!firstAvailableVariant}
-            className="w-full glass-panel text-white py-3 px-6 uppercase tracking-wider text-xs font-medium hover:bg-white hover:text-black transition-colors duration-300"
+            className="w-full glass-panel text-white py-3 px-6 uppercase tracking-wider text-[10px] font-bold hover:bg-white hover:text-black transition-colors duration-300"
           >
             {firstAvailableVariant ? "Quick Add" : "Sold Out"}
           </button>
@@ -86,9 +96,14 @@ export default function ProductCard({ product, className }: ProductCardProps) {
         <h3 className="text-sm font-primary uppercase tracking-wide truncate">
           {title}
         </h3>
-        <p className="text-sm text-foreground/70">
-          {currency} {price}
-        </p>
+        <div className="flex items-center gap-3">
+          <p className="text-sm text-foreground/80 font-medium">
+            {currency} {price}
+          </p>
+          <span className="text-[10px] uppercase tracking-widest text-foreground/40">
+            India
+          </span>
+        </div>
       </div>
     </Link>
   );
