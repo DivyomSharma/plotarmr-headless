@@ -23,7 +23,7 @@ export async function shopifyFetch<T>({
         "Content-Type": "application/json",
         "X-Shopify-Storefront-Access-Token": storefrontAccessToken!,
       },
-      body: { query, variables } && JSON.stringify({ query, variables }),
+      body: JSON.stringify({ query, variables }),
       // Allows Next.js to cache fetches, we'll configure revalidation where used.
       cache: "no-store", 
     });
