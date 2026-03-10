@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-dark: #0a0a0a;
+  --color-brand-surface: #121212;
+  --color-brand-light: #ffffff;
+  --color-brand-light-surface: #f3f3f3;
+  --color-brand-accent: #ff6a00;
+  
+  --font-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-secondary: "Inter", sans-serif;
+}
+
+/* Base Configuration for Dark Luxury Theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-brand-light);
+  --foreground: var(--color-brand-dark);
+  --surface: var(--color-brand-light-surface);
+  --accent: var(--color-brand-accent);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --background: var(--color-brand-dark);
+  --foreground: var(--color-brand-light);
+  --surface: var(--color-brand-surface);
+  --accent: var(--color-brand-accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply transition-colors duration-500 font-secondary antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply uppercase tracking-wider font-primary font-normal leading-tight;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-panel {
+    @apply bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-white/10;
+  }
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
